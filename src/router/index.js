@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import playground from '../views/playGround.vue';
 import forIf from '../views/forIf.vue';
+import ListPage from '../views/ListPage.vue';
+import Event from '../views/Event.vue';
 
 
 Vue.use(VueRouter);
@@ -21,6 +23,16 @@ const routes = [{
     path: '/forif',
     name: 'forIf',
     component: forIf,
+  },
+  {
+    path: '/ListPage',
+    name: 'ListPage',
+    component: ListPage,
+  },
+  {
+    path: '/event',
+    name: 'Event',
+    component: Event,
   },
   {
     path: "/about",
