@@ -2,13 +2,15 @@
   <div class="ListPage">
     <h1>ListPage</h1>
     <ul id="esample-1">
-      <li v-for="(item, i) in items" :key="i">{{item.message}}</li>
+      <li v-for="(item, i) in items" :key="i">{{ item.message }}</li>
     </ul>
     <ul id="esample-2">
-      <li v-for="(value, name) in object" :key="name">{{value}} : {{name}}</li>
+      <li v-for="(value, name) in object" :key="name">
+        {{ value }} : {{ name }}
+      </li>
     </ul>
-    <li v-for="(n,i) in evenNumbers" :key="i">{{ n }}</li>
-    <span v-for="n in 100" :key="n">{{n}}</span>
+    <li v-for="(n, i) in evenNumbers" :key="i">{{ n }}</li>
+    <span v-for="n in 100" :key="n">{{ n }}</span>
   </div>
 </template>
 

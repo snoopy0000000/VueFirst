@@ -8,10 +8,10 @@
     </p>
     <p v-if="seen">이제 나를 볼 수 있어요</p>
     <li v-for="(todo, i) in todos" v-bind:key="i">
-      {{todo.text}}
+      {{ todo.text }}
       <HelloWorld msg="안녕하세요"></HelloWorld>
     </li>
-    <p>{{message}}</p>
+    <p>{{ message }}</p>
     <button v-on:click="reverseMessage">메시지 뒤집기</button>
     <input v-model="message" />
     <Event :pageH1="eventH1"></Event>

@@ -1,19 +1,28 @@
 <template>
   <div class="playground">
-    <span>메시지 : {{ msg + ' 반갑습니다'}}</span>
+    <span>메시지 : {{ msg + " 반갑습니다" }}</span>
     <div v-html="msg"></div>
     <div v-bind:title="title">타이틀</div>
-    <div>{{1+3}}</div>
-    <div>{{ ok ? 'YES' : 'NO' }}</div>
-    <div>{{reverseTitle}}</div>
-    <div>{{title.split("").reverse().join("")}}</div>
-    <div>{{reverseTitle}}</div>
-    <div>{{reverse}}</div>
+    <div>{{ 1 + 3 }}</div>
+    <div>{{ ok ? "YES" : "NO" }}</div>
+    <div>{{ reverseTitle }}</div>
+    <div>
+      {{
+        title
+          .split("")
+          .reverse()
+          .join("")
+      }}
+    </div>
+    <div>{{ reverseTitle }}</div>
+    <div>{{ reverse }}</div>
     <!-- <div :class="{active: isActive }" class="text-danger">클래스 바인딩</div> -->
     <!-- <div :class="[isActive ? 'active':'', 'text-danger']">클래스 바인딩</div> -->
-    <div :class="[{active: isActive}, 'text-danger']">클래스 바인딩</div>
-    <div v-bind:class="{active: !isActive }">클래스 바인딩 반전</div>
-    <div :style="{color : 'red', fontSize: size + 'px'}">인라인 스타일 바인딩</div>
+    <div :class="[{ active: isActive }, 'text-danger']">클래스 바인딩</div>
+    <div v-bind:class="{ active: !isActive }">클래스 바인딩 반전</div>
+    <div :style="{ color: 'red', fontSize: size + 'px' }">
+      인라인 스타일 바인딩
+    </div>
     <div :style="fontStyle">인라인 스타일 바인딩</div>
   </div>
 </template>
