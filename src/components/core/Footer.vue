@@ -1,5 +1,5 @@
 <template>
-  <v-footer absolute class="font-weight-medium">
+  <v-footer class="font-weight-medium">
     <v-col class="text-center" cols="12">
       © 2020 —
       <strong>Vuetify, LLC — Made with 💜 by Jung Ah</strong>

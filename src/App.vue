@@ -1,56 +1,38 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld />
-    </v-main>
+    <router-view></router-view>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
 
-  components: {
-    HelloWorld
-  },
+  components: {},
 
   data: () => ({
     //
   })
 };
 </script>
+
+<style lang="scss">
+h2 {
+  font-weight: 700;
+  font-size: 3rem; //폰트 사이즈 전용 "rem"
+  text-align: center;
+  margin-top: 100px;
+}
+p {
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.87);
+}
+.divider {
+  width: 56px;
+  height: 5px;
+  margin: 0 auto 32px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+</style>
