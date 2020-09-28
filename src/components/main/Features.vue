@@ -20,35 +20,35 @@
 // @ is an alias to /src
 
 export default {
-  name: "features",
+  name: 'features',
   components: {
-    FeatureItem: () => import("@/components/main/featureitem.vue")
+    FeatureItem: () => import('@/components/main/featureitem.vue'),
   },
   data() {
     return {
       features: [
         {
-          icon: "mdi-account",
-          title: "VIBRANT COMMUNOTY",
+          icon: 'mdi-account',
+          title: 'VIBRANT COMMUNOTY',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam"
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam',
         },
         {
-          icon: "mdi-camera",
-          title: "FREQUENT UPDATES",
+          icon: 'mdi-camera',
+          title: 'FREQUENT UPDATES',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam"
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam',
         },
         {
-          icon: "mdi-cloud",
-          title: "LONG-TERM SUPPORT",
+          icon: 'mdi-cloud',
+          title: 'LONG-TERM SUPPORT',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam"
-        }
-      ]
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam',
+        },
+      ],
     };
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
