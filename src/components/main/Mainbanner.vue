@@ -3,7 +3,8 @@
     <v-img src="../../assets/banners/banners.jpg" min-height="422" alt />
     <div class="text-box">
       <div class="flex-item">WELCOME TO</div>
-      <div class="flex-item big">VUETIFY</div>
+      <div class="flex-item big-font">VUETIFY</div>
+      <div></div>
     </div>
   </div>
 </template>
@@ -36,7 +37,8 @@ export default {
   color: white;
   text-align: center;
 }
-.big {
-  font-weight: bold;
+.big-font {
+  font-weight: 900;
+  font-size: 90px;
 }
 </style>
