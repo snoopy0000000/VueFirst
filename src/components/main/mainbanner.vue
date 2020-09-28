@@ -4,6 +4,7 @@
     <div class="text-box">
       <div class="flex-item">WELCOME TO</div>
       <div class="flex-item big-font">VUETIFY</div>
+      <div></div>
     </div>
   </div>
 </template>
@@ -12,12 +13,12 @@
 // @ is an alias to /src
 
 export default {
-  name: 'Mainbanner',
+  name: "Mainbanner",
   components: {},
   data() {
     return {};
   },
-  methods: {},
+  methods: {}
 };
 </script>
 
