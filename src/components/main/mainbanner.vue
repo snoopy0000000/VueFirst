@@ -12,12 +12,12 @@
 // @ is an alias to /src
 
 export default {
-  name: "Mainbanner",
+  name: 'Mainbanner',
   components: {},
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
