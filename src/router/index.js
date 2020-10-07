@@ -12,8 +12,12 @@ const routes = [{
     children: [{
       path: "/",
       component: () =>
-        import("../views/main/Main.vue")
-    }],
+        import("../views/main/Main.vue"),
+    }, {
+      path: "/gallery",
+      component: () =>
+        import("../views/Gallery.vue"),
+    }, ],
   },
 
   {

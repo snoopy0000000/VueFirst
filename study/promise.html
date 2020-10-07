@@ -1,0 +1,132 @@
+<template>
+  <div></div>
+</template>
+
+<script>
+  //callback 구현 공식
+  function asyncThing(callback) {
+    // 비동기를 표현하기 위해 setTimeout 함수를 사용
+    window.setTimeout(function () {
+      callback();
+    }, 3000); //3초후 실행시킨다.
+  }
+
+  //promise 구현 공식
+  function _promise() {
+    return new promise(resolve => {
+      window.setTimeout(function () {
+        resolve("해결 완료"); //resolve끝내겠다.
+      }, 3000);
+    });
+  }
+
+  //asyncThing(() => console.log('To it!!!'))
+  _promise()
+    .then(data => {
+      console.log(data);
+
+      //----------------------------------------------------------------
+
+      //callback 구현 공식
+      function asyncThing(callback) {
+        // 비동기를 표현하기 위해 setTimeout 함수를 사용
+        window.setTimeout(function () {
+          callback();
+        }, 3000); //3초후 실행시킨다.
+      }
+
+      //promise 구현 공식
+      function _promise() {
+        return new promise((resolve, reject) => {
+          window.setTimeout(function () {
+            if (param) {
+              resolve("해결완료");
+            } else {
+              reject(Error("실패!")); //resolve끝내겠다.
+            }
+          }, 3000); //<-3초
+        });
+      }
+
+      //asyncThing(() => console.log('To it!!!'))
+      _promise()
+        .then(data => {
+          console.log(data);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+
+      //-------------------------------------------------------------------------------
+
+      //callback 구현 공식
+      function asyncThing(callback) {
+        // 비동기를 표현하기 위해 setTimeout 함수를 사용
+        window.setTimeout(function () {
+          callback();
+        }, 3000); //3초후 실행시킨다.
+      }
+
+      //promise 구현 공식
+      function _promise(param) {
+        return new promise((resolve, reject) => {
+          window.setTimeout(function () {
+            if (param) {
+              resolve("해결완료");
+            } else {
+              reject(Error("실패!")); //resolve끝내겠다.
+            }
+          }, 3000); //<-3초
+        });
+      }
+
+      //asyncThing(() => console.log('To it!!!'))
+      _promise(true)
+        .then(data => {
+          return _promise(true);
+        })
+        .then(data => {
+          console.log(data);
+        });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
+  //-------------------------------------------------------------------------------
+
+  //Promise 선언
+  var _promise = function (param) {
+    return new Promise(function (resolve, reject) {
+      // 비동기를 표현하기 위해 setTimeout 함수를 사용
+      window.setTimeout(function () {
+        // 파라메터가 참이면,
+        if (param) {
+          // 해결됨
+          resolve("해결 완료");
+        }
+
+        // 파라메터가 거짓이면,
+        else {
+          // 실패
+          reject(Error("실패!!"));
+        }
+      }, 3000);
+    });
+  };
+
+  //Promise 실행
+  _promise(true).then(
+    function (text) {
+      // 성공시
+      console.log(text);
+    },
+    function (error) {
+      // 실패시
+      console.error(error);
+    }
+  );
+</script>
+
+<style lang="scss" scoped>
+</style>
