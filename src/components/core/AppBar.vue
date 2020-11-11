@@ -6,6 +6,7 @@
     <v-toolbar-title>VUETIFY</v-toolbar-title>
     <router-link to="/" class="menu">Home</router-link>
     <router-link to="/gallery" class="menu">Gallery</router-link>
+    <router-link to="/service" class="menu">Service</router-link>
     <v-spacer></v-spacer>
     <!--중간 간격주기 붕 띄우기-->
     <v-btn>login</v-btn>

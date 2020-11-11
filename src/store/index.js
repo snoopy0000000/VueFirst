@@ -198,7 +198,9 @@ export default new Vuex.Store({
         }
       ],
       "message": "Successfully! All records has been fetched."
-    }
+    },
+
+    images: []
   },
   mutations: {
     addBlog(state, payload) {
@@ -206,10 +208,13 @@ export default new Vuex.Store({
     },
     addFile(state, payload) {
       state.files.push(payload)
-    }
+    },
     // addVuex(state, payload) {
     //   state.blogs.push(payload)
     // }
+    setImages(state, payload) {
+      state.images = payload
+    }
   },
   actions: {},
   modules: {}

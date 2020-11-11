@@ -10,14 +10,21 @@ const routes = [{
     name: "Home",
     component: Home,
     children: [{
-      path: "/",
-      component: () =>
-        import("../views/main/Main.vue"),
-    }, {
-      path: "/gallery",
-      component: () =>
-        import("../views/Gallery.vue"),
-    }, ],
+        path: "/",
+        component: () =>
+          import("../views/main/Main.vue"),
+      },
+      {
+        path: "/gallery",
+        component: () =>
+          import("../views/Gallery.vue"),
+      },
+      {
+        path: "/service",
+        component: () =>
+          import("../views/Service.vue"),
+      },
+    ],
   },
 
   {

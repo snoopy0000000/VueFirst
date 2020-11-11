@@ -1,6 +1,6 @@
 <template>
   <div class="contact-me">
-    <h2>{{ 'Contact Me'.toUpperCase() }}</h2>
+    <h2>{{ "Contact Me".toUpperCase() }}</h2>
     <div class="divider"></div>
     <div class="form">
       <v-text-field
@@ -47,19 +47,19 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import sendGrid from '@/config/sendGrid.json';
+import { mapState } from "vuex";
+import sendGrid from "@/config/sendGrid.json";
 export default {
   data() {
     return {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
     };
   },
   computed: {
-    ...mapState(['body']),
+    ...mapState(["body"])
   },
   beforeMount() {},
   methods: {
@@ -78,27 +78,27 @@ export default {
       for (let i = 0; i < this.body.data.length; i++) {
         let employee = this.body.data[i];
         console.log(
-          'name :' +
+          "name :" +
             employee.employee_name +
-            '   age : ' +
+            "   age : " +
             employee.employee_age
         );
       }
-      console.log('for of 문');
+      console.log("for of 문");
       for (let employee of this.body.data) {
         console.log(
-          'name :' +
+          "name :" +
             employee.employee_name +
-            '   age : ' +
+            "   age : " +
             employee.employee_age
         );
       }
-      console.log('forEach 사용법');
-      this.body.data.forEach((employee) => {
+      console.log("forEach 사용법");
+      this.body.data.forEach(employee => {
         console.log(
-          'name :' +
+          "name :" +
             employee.employee_name +
-            '   age : ' +
+            "   age : " +
             employee.employee_age
         );
       });
@@ -109,32 +109,31 @@ export default {
           {
             to: [
               {
-                email: 'snoopy8610@naver.com',
-              },
+                email: "snoopy8610@naver.com"
+              }
             ],
-            subject: this.subject,
-          },
+            subject: this.subject
+          }
         ],
         from: {
-          email: this.email,
+          email: this.email
         },
         content: [
           {
-            type: 'text/plain',
-            value:
-              '안녕하세요 내 이름은' + this.name + '입니다.' + this.message,
-          },
-        ],
+            type: "text/plain",
+            value: "안녕하세요 내 이름은" + this.name + "입니다." + this.message
+          }
+        ]
       };
       this.$http
-        .post('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', body, {
+        .post("https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send", body, {
           headers: {
-            'content-type': 'application/json',
-            'x-rapidapi-host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
-            'x-rapidapi-key': sendGrid.key,
-            accept: 'application/json',
-            useQueryString: true,
-          },
+            "content-type": "application/json",
+            "x-rapidapi-host": "rapidprod-sendgrid-v1.p.rapidapi.com",
+            "x-rapidapi-key": sendGrid.key,
+            accept: "application/json",
+            useQueryString: true
+          }
         })
         .then(function(response) {
           console.log(response);
@@ -142,8 +141,8 @@ export default {
         .catch(function(error) {
           console.log(error);
         });
-    },
-  },
+    }
+  }
 };
 </script>
 
